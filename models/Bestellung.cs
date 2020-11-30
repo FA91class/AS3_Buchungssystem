@@ -8,12 +8,9 @@ namespace AS3_Buchung.models
     {
         public string bestellNr;
         public DateTime bestellDatum;
+        public List<BestellPosition> bestellPositionen;
 
-        public Bestellung(string BestellNr, DateTime BestellDatum)
-        {
-            this.bestellNr = BestellNr;
-            this.bestellDatum = BestellDatum;
-        }
+        public Rechnung Rechnung = new Rechnung();
 
         public string BestellNr
         {
@@ -44,5 +41,25 @@ namespace AS3_Buchung.models
                     bestellDatum = value;
             }
         }
+
+        public Bestellung(string BestellNr, DateTime BestellDatum)
+        {
+            this.bestellNr = BestellNr;
+            this.bestellDatum = BestellDatum;
+            this.Rechnung.RechnungsNr = bestellNr;
+            this.Rechnung.RechnungsDatum = BestellDatum;
+
+            this.bestellPositionen = new List<BestellPosition>();
+        }
+
+        public void AddBestellPosition(BestellPosition bp)
+        {
+            this.bestellPositionen.Add(bp);
+            for (int i = 0; i < bp.Anzahl; i++)
+            {
+                this.Rechnung.SummeNetto += bp.Artikel.EinzelPreis;
+            }            
+        }
+
     }
 }

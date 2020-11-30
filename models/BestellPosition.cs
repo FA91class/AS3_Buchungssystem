@@ -7,10 +7,14 @@ namespace AS3_Buchung.models
     class BestellPosition
     {
         private int anzahl;
+        public int PositionsNr;
 
-        public BestellPosition(int anzahl)
+        public Artikel Artikel { get; set; }
+
+        public BestellPosition(int positionsNr, int anzahl)
         {
             this.anzahl = anzahl;
+            this.PositionsNr = positionsNr;
 
             ServiceKostenInEuro = Math.Round(Anzahl * 0.5, 2);
         }
@@ -29,8 +33,6 @@ namespace AS3_Buchung.models
                     anzahl = value;
             }
         }
-
-        public int PositionsNr { get; set; }
 
         public double ServiceKostenInEuro { get; }
     }

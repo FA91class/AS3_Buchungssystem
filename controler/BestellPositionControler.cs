@@ -11,10 +11,10 @@ namespace AS3_Buchung.controler
         {
             List<BestellPosition> liste = new List<BestellPosition>
                     {
-                        new BestellPosition(1),
-                        new BestellPosition(2),
-                        new BestellPosition(3),
-                        new BestellPosition(10),
+                        new BestellPosition(1, 1),
+                        new BestellPosition(2, 1),
+                        new BestellPosition(3, 1),
+                        new BestellPosition(10, 1),
                     };
             foreach (var element in liste)
             {

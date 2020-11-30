@@ -18,11 +18,13 @@ namespace AS3_Buchung.models
         public string PLZ { get; set; }
 
         public string Strasse { get; set; }
+
+        public List<Bestellung> Bestellungen { get; set; }
         #endregion
 
         public Kunde(List<Bestellung> bestellungen)
         {
-
+            this.Bestellungen = bestellungen;
         }
     }
 }

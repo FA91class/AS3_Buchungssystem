@@ -1,4 +1,6 @@
 ﻿using System;
+using AS3_Buchung.calsses;
+using AS3_Buchung.classes;
 using AS3_Buchung.controler;
 using AS3_Buchung.helper;
 
@@ -31,6 +33,7 @@ namespace AS3_Buchung
                         Console.WriteLine("         /artikel                 /führt die main Methode des Artikel Controlers aus");
                         Console.WriteLine("         /bestellung              /führt die main Methode des Bestellung Controlers aus");
                         Console.WriteLine("         /bestellposition         /führt die main Methode des Bestell Position Controlers aus");
+                        Console.WriteLine("         /rechnung                /printet eine Rechnung in die Konsole");
                         Console.WriteLine("         /exit                    /beendet die ausführung des Programms");
                         Console.WriteLine("         /clear                   /leert die Console");
                         Console.WriteLine("         /help                    /öffnet die Command hilfe\n");
@@ -52,6 +55,17 @@ namespace AS3_Buchung
                         Console.Clear();
                         DekoWorker.SetLogo();
                         BestellPositionControler.Run();
+                        DekoWorker.SetSpacer();
+                        break;
+                    case "/rechnung":
+                        Console.Clear();
+                        DekoWorker.SetLogo();
+                        var k = new KundenVerwaltung();
+                        var d = new KonsolenDrucker();
+                        foreach (var kunde in k.Kunden)
+                        {
+                            d.RechnungsAusgabe(kunde);
+                        }                        
                         DekoWorker.SetSpacer();
                         break;
                     case "/clear":

@@ -11,7 +11,7 @@ namespace AS3_Buchung.controler
         {
             Artikel a1 = new Artikel
             {
-                ArtikelNr = 1115,
+                ArtikelNr = "1115",
                 Bezeichnung = "Schokoliebe",
                 Produkthinweis = "Schokoladen- und Vanilleeis mit Eierlikör, Schokoladensoße, hausgemachter Schlagsahne, Schokomandelsplittern und Cookies"
             };
