@@ -6,10 +6,13 @@ namespace AS3_Buchung.models
 {
     class Rechnung
     {
+        #region const
         private double sumNetto;
 
         private double rabatProzent;
+        #endregion
 
+        #region properties
         public string BerechnungsNr { get; set; }
 
         public DateTime BerechnungsDatum { get; set; }
@@ -27,6 +30,7 @@ namespace AS3_Buchung.models
         public double UstAufschlag { get; set; }
 
         public double SummeBruto { get; set; }
+        #endregion
 
         public void Berechne()
         {

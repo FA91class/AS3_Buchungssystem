@@ -6,6 +6,7 @@ namespace AS3_Buchung.models
 {
     class Kunde
     {
+        #region properties
         public int TischNr { get; set; }
 
         public string KundenNr { get; set; }
@@ -17,6 +18,7 @@ namespace AS3_Buchung.models
         public string PLZ { get; set; }
 
         public string Strasse { get; set; }
+        #endregion
 
         public Kunde(List<Bestellung> bestellungen)
         {
