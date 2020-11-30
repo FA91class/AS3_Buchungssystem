@@ -9,10 +9,12 @@ namespace AS3_Buchung.controler
     {
         public static void Run()
         {
-            Artikel a1 = new Artikel();
-            a1.ArtikelNr = 1115;
-            a1.Bezeichnung = "Schokoliebe";
-            a1.Produkthinweis = "Schokoladen- und Vanilleeis mit Eierlikör, Schokoladensoße, hausgemachter Schlagsahne, Schokomandelsplittern und Cookies";
+            Artikel a1 = new Artikel
+            {
+                ArtikelNr = 1115,
+                Bezeichnung = "Schokoliebe",
+                Produkthinweis = "Schokoladen- und Vanilleeis mit Eierlikör, Schokoladensoße, hausgemachter Schlagsahne, Schokomandelsplittern und Cookies"
+            };
             Console.WriteLine("Datentyp: " + a1.GetType());
             Console.WriteLine("Artikelnummer: " + a1.ArtikelNr);
             Console.WriteLine("Bezeichnung: " + a1.Bezeichnung);
