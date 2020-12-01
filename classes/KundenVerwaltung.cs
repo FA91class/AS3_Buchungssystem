@@ -12,6 +12,7 @@ namespace AS3_Buchung.classes
         {
             var b1 = new Bestellung("B123456", new DateTime(2019, 10, 13)) { Rechnung = new Rechnung { RechnungsNr = "R123456", RechnungsDatum = new DateTime(2019, 10, 14), RabattProzent = 2, UstProzent = 19 } };
 
+            #region fakedata
             var bp1 = new BestellPosition(1, 4) { Artikel = new Artikel { EinzelPreis = 3.50, ArtikelNr = "9836", Bezeichnung = "Cappuccino" } };
             var bp2 = new BestellPosition(3, 1) { Artikel = new Artikel { EinzelPreis = 6.50, ArtikelNr = "1115", Bezeichnung = "Schokoliebe", Produkthinweis = "Schokoladen- und Vanilleeis mit Eierlikör, Schokoladensoße, hausgemachter Schlagsahne, Schokomandelsplittern und Cookies" } };
             var bp3 = new BestellPosition(2, 1) { Artikel = new Artikel { EinzelPreis = 3.00, ArtikelNr = "1548", Bezeichnung = "Pistazien-Eis", Produkthinweis = "Pistazieneis aus 100% sizilianischen Pistazien (aus Bronte)" } };
@@ -94,6 +95,7 @@ namespace AS3_Buchung.classes
             b1.AddBestellPosition(bp38);
             b1.AddBestellPosition(bp39);
             b1.AddBestellPosition(bp40);
+            #endregion
 
             b1.Rechnung.Berechne();
 
