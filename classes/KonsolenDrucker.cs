@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AS3_Buchung.controler;
+using AS3_Buchung.controller;
 using AS3_Buchung.helper;
 using AS3_Buchung.models;
 
-namespace AS3_Buchung.calsses
+namespace AS3_Buchung.classes
 {
     class KonsolenDrucker
     {

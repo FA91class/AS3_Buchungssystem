@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using AS3_Buchung.models;
 
-namespace AS3_Buchung.controler
+namespace AS3_Buchung.controller
 {
-    class BestellungControler
+    class BestellungController
     {
         public static void Run()
         {

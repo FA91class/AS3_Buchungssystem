@@ -1,7 +1,6 @@
 ﻿using System;
-using AS3_Buchung.calsses;
 using AS3_Buchung.classes;
-using AS3_Buchung.controler;
+using AS3_Buchung.controller;
 using AS3_Buchung.helper;
 
 namespace AS3_Buchung
@@ -42,19 +41,19 @@ namespace AS3_Buchung
                     case "/artikel":
                         Console.Clear();
                         DekoWorker.SetLogo();
-                        ArtikelControler.Run();
+                        ArtikelController.Run();
                         DekoWorker.SetSpacer();
                         break;
                     case "/bestellung":
                         Console.Clear();
                         DekoWorker.SetLogo();
-                        BestellungControler.Run();
+                        BestellungController.Run();
                         DekoWorker.SetSpacer();
                         break;
                     case "/bestellposition":
                         Console.Clear();
                         DekoWorker.SetLogo();
-                        BestellPositionControler.Run();
+                        BestellPositionController.Run();
                         DekoWorker.SetSpacer();
                         break;
                     case "/rechnung":
