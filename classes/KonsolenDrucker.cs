@@ -12,16 +12,25 @@ namespace AS3_Buchung.calsses
         public void RechnungsAusgabe(Kunde kunde)
         {
             var i = 0;
+            var v = 0;
             foreach (var bestellung in kunde.Bestellungen)
             {
                 i++;
                 SeitenKopf(i);
                 RechnungsKopf(kunde, bestellung);
                 RechnungsFuss(bestellung.Rechnung);
-                DekoWorker.SetSpacer();
+                Console.WriteLine("\r\n");
                 PositionsKopf();
                 foreach (var position in bestellung.bestellPositionen)
                 {
+                    v++;
+                    if (v > 20)
+                    {
+                        i++;
+                        v = 0;
+                        Console.WriteLine("\r\n");
+                        PositionsKopf();
+                    }
                     PositionsZeile(position);
                 }
             }
