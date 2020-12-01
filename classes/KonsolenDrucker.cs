@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 using AS3_Buchung.controller;
 using AS3_Buchung.helper;
 using AS3_Buchung.models;
@@ -21,7 +22,7 @@ namespace AS3_Buchung.classes
                 RechnungsFuss(bestellung.Rechnung);
                 Console.WriteLine("\r\n");
                 PositionsKopf();
-                foreach (var position in bestellung.bestellPositionen)
+                foreach (var position in bestellung.bestellPositionen.OrderBy(o=>o.PositionsNr).ToList())
                 {
                     v++;
                     if (v > 20)
