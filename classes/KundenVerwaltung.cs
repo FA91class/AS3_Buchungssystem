@@ -75,10 +75,6 @@ namespace AS3_Buchung.classes
             b1.AddBestellPosition(bp18);
             b1.AddBestellPosition(bp19);
             b1.AddBestellPosition(bp20);
-            b1.AddBestellPosition(bp21);
-            b1.AddBestellPosition(bp22);
-            b1.AddBestellPosition(bp23);
-            b1.AddBestellPosition(bp24);
             b1.AddBestellPosition(bp25);
             b1.AddBestellPosition(bp26);
             b1.AddBestellPosition(bp27);
@@ -89,6 +85,10 @@ namespace AS3_Buchung.classes
             b1.AddBestellPosition(bp32);
             b1.AddBestellPosition(bp33);
             b1.AddBestellPosition(bp34);
+            b1.AddBestellPosition(bp21);
+            b1.AddBestellPosition(bp22);
+            b1.AddBestellPosition(bp23);
+            b1.AddBestellPosition(bp24);            
             b1.AddBestellPosition(bp35);
             b1.AddBestellPosition(bp36);
             b1.AddBestellPosition(bp37);
